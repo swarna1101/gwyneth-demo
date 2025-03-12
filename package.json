@@ -1,0 +1,33 @@
+{
+  "name": "gwyneth-demo",
+  "version": "1.0.0",
+  "description": "Gwyneth Synchronous Composability Demo",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:l1": "hardhat run scripts/deploy-l1.js --network l1",
+    "deploy:l2a": "hardhat run scripts/deploy-l2.js --network l2a",
+    "deploy:l2b": "hardhat run scripts/deploy-l2.js --network l2b",
+    "deploy:all": "npm run deploy:l1 && npm run deploy:l2a && npm run deploy:l2b",
+    "deploy": "hardhat run scripts/deploy.js --network l1",
+    "demo": "hardhat run scripts/run-demo.js --network l1",
+    "test": "hardhat test"
+  },
+  "keywords": [
+    "gwyneth",
+    "ethereum",
+    "layer2",
+    "synchronous",
+    "composability"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.15.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.2.0"
+  }
+}
